@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean Brennan — Relationships Mentor | Top Five Friends</title>
-    <meta name="description" content="Meet Sean Brennan. Restaurant owner who almost lost his marriage before figuring out his patterns. The warmest, most direct take on relationships you'll hear.">
+    <meta name="description" content="Meet Sean Brennan. Almost lost his marriage before figuring out his patterns. The warmest, most direct take on relationships.">
     <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,60 +14,62 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Source Sans 3', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; line-height: 1.2; }
-        nav { position: fixed; top: 0; left: 0; right: 0; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(248, 246, 241, 0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--border); }
+        nav { position: fixed; top: 0; left: 0; right: 0; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: var(--ink); z-index: 100; }
         .logo { text-decoration: none; }
-        .nav-cta { background: var(--ink); color: var(--paper); padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 500; transition: all 0.2s; }
-        .nav-cta:hover { background: var(--accent); }
-        .hero { padding: 10rem 2rem 6rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .hero-tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 0.5rem 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 1.5rem; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1rem; }
-        .hero-title { font-size: 1.25rem; color: var(--muted); margin-bottom: 2rem; }
-        .hero-bio { font-size: 1.15rem; line-height: 1.8; margin-bottom: 2.5rem; }
-        .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--accent); color: white; padding: 1.25rem 2rem; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .logo img { height: 28px; }
+        .nav-cta { background: var(--accent); color: var(--paper); padding: 0.65rem 1.25rem; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.2s; }
+        .nav-cta:hover { background: var(--paper); color: var(--ink); }
+        .hero { padding: 8rem 2rem 5rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .hero-tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 0.5rem 1rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 1.25rem; }
+        .hero h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); margin-bottom: 0.75rem; }
+        .hero-title { font-size: 1.1rem; color: var(--muted); margin-bottom: 1.5rem; }
+        .hero-bio { font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem; }
+        .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--accent); color: white; padding: 1.1rem 1.75rem; text-decoration: none; font-weight: 600; transition: all 0.3s; }
         .hero-cta:hover { background: var(--ink); transform: translateY(-2px); }
-        .hero-cta svg { width: 24px; height: 24px; }
-        .img-placeholder { aspect-ratio: 4/5; background: linear-gradient(135deg, var(--accent-light), #fecaca); display: flex; align-items: center; justify-content: center; font-size: 6rem; border: 1px solid var(--border); position: relative; }
-        .img-badge { position: absolute; bottom: -1rem; right: -1rem; background: white; border: 1px solid var(--border); padding: 1rem 1.5rem; font-family: 'Playfair Display', serif; font-style: italic; }
-        .story { background: white; padding: 6rem 2rem; }
+        .hero-cta svg { width: 22px; height: 22px; }
+        .img-placeholder { aspect-ratio: 4/5; background: linear-gradient(135deg, var(--accent-light), #fecaca); display: flex; align-items: center; justify-content: center; font-size: 5rem; border: 1px solid var(--border); position: relative; }
+        .img-badge { position: absolute; bottom: -0.75rem; right: -0.75rem; background: white; border: 1px solid var(--border); padding: 0.75rem 1.25rem; font-family: 'Playfair Display', serif; font-style: italic; }
+        .story { background: white; padding: 5rem 2rem; }
         .story-inner { max-width: 800px; margin: 0 auto; }
-        .story h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--accent); }
-        .story p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--muted); }
+        .story h2 { font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--accent); }
+        .story p { font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.25rem; color: var(--muted); }
         .story p strong { color: var(--ink); }
-        .quote { background: var(--accent-light); padding: 5rem 2rem; text-align: center; }
-        .quote blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2.5rem); font-style: italic; max-width: 800px; margin: 0 auto; }
-        .quote cite { display: block; margin-top: 1.5rem; font-style: normal; color: var(--muted); }
-        .philosophy { background: var(--ink); color: var(--paper); padding: 6rem 2rem; }
+        .quote { background: var(--accent-light); padding: 4rem 2rem; text-align: center; }
+        .quote blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.35rem, 4vw, 2.25rem); font-style: italic; max-width: 800px; margin: 0 auto; }
+        .quote cite { display: block; margin-top: 1.25rem; font-style: normal; color: var(--muted); }
+        .philosophy { background: var(--ink); color: var(--paper); padding: 5rem 2rem; }
         .philosophy-inner { max-width: 1000px; margin: 0 auto; }
-        .philosophy h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
-        .beliefs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .belief { padding: 2rem; border: 1px solid rgba(255,255,255,0.1); }
-        .belief h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 1rem; }
-        .belief p { color: rgba(248, 246, 241, 0.8); line-height: 1.7; }
-        .helps { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .helps h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
-        .helps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .help-card { padding: 2rem; background: white; border: 1px solid var(--border); }
-        .help-card h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent); }
-        .help-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
-        .cta { padding: 6rem 2rem; text-align: center; max-width: 700px; margin: 0 auto; }
-        .cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .cta > p { font-size: 1.15rem; color: var(--muted); margin-bottom: 2.5rem; }
-        .cta-trial { margin-top: 1.5rem; font-size: 0.95rem; color: var(--muted); }
-        .other { padding: 4rem 2rem; border-top: 1px solid var(--border); }
+        .philosophy h2 { font-size: 1.75rem; margin-bottom: 2.5rem; text-align: center; }
+        .beliefs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .belief { padding: 1.75rem; border: 1px solid rgba(255,255,255,0.1); }
+        .belief h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.75rem; }
+        .belief p { color: rgba(248, 246, 241, 0.8); line-height: 1.7; font-size: 0.95rem; }
+        .helps { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .helps h2 { font-size: 1.75rem; margin-bottom: 2.5rem; text-align: center; }
+        .helps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .help-card { padding: 1.75rem; background: white; border: 1px solid var(--border); }
+        .help-card h3 { font-size: 1.15rem; margin-bottom: 0.75rem; color: var(--accent); }
+        .help-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+        .cta { padding: 5rem 2rem; text-align: center; max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2.25rem; margin-bottom: 1.25rem; }
+        .cta > p { font-size: 1.1rem; color: var(--muted); margin-bottom: 2rem; }
+        .cta-trial { margin-top: 1.25rem; font-size: 0.9rem; color: var(--muted); }
+        .other { padding: 3rem 2rem; border-top: 1px solid var(--border); }
         .other-inner { max-width: 1200px; margin: 0 auto; }
-        .other h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 2rem; text-align: center; }
-        .other-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-        .other-link { color: var(--ink); text-decoration: none; font-weight: 500; padding: 0.75rem 1.5rem; border: 1px solid var(--border); transition: all 0.2s; }
+        .other h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 1.5rem; text-align: center; }
+        .other-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .other-link { color: var(--ink); text-decoration: none; font-weight: 500; padding: 0.6rem 1.25rem; border: 1px solid var(--border); transition: all 0.2s; font-size: 0.9rem; }
         .other-link:hover { background: white; border-color: var(--ink); }
-        footer { background: var(--ink); color: var(--paper); padding: 3rem 2rem; text-align: center; }
-        footer p { font-size: 0.9rem; color: rgba(248, 246, 241, 0.6); }
+        footer { background: var(--ink); color: var(--paper); padding: 2.5rem 2rem; text-align: center; }
+        footer p { font-size: 0.85rem; color: rgba(248, 246, 241, 0.6); }
         footer a { color: var(--paper); }
-        @media (max-width: 900px) { .hero { grid-template-columns: 1fr; text-align: center; } .beliefs, .helps-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { nav { padding: 0.9rem 1.25rem; } .logo img { height: 24px; } .hero { grid-template-columns: 1fr; text-align: center; padding: 6rem 1.25rem 3rem; gap: 2rem; } .img-placeholder { max-width: 300px; margin: 0 auto; font-size: 4rem; } .story { padding: 3rem 1.25rem; } .quote { padding: 3rem 1.25rem; } .philosophy { padding: 3rem 1.25rem; } .helps { padding: 3rem 1.25rem; } .cta { padding: 3rem 1.25rem; } .other { padding: 2rem 1.25rem; } }
+        @media (max-width: 600px) { nav { padding: 0.75rem 1rem; } .nav-cta { padding: 0.5rem 1rem; font-size: 0.85rem; } .hero { padding: 5rem 1rem 2.5rem; } .hero-cta { width: 100%; justify-content: center; } .cta .hero-cta { width: 100%; justify-content: center; } .other-row { gap: 0.75rem; } .other-link { padding: 0.5rem 1rem; font-size: 0.85rem; } }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020775/logo-primary-dark_uv0mdz.svg" alt="Top Five Friends" height="28"></a>
+        <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020775/logo-primary-light_p8s8k0.svg" alt="Top Five Friends"></a>
         <a href="https://t.me/Sean_Brennan_bot?start=website" class="nav-cta" target="_blank">Message Sean</a>
     </nav>
     <section class="hero">
@@ -75,7 +77,7 @@
             <span class="hero-tag">Relationships</span>
             <h1>Sean Brennan</h1>
             <p class="hero-title">Restaurant owner, Philadelphia • 44</p>
-            <p class="hero-bio">Sean almost lost his marriage before he figured out his own patterns. Now he runs a restaurant with his wife and has the warmest, most direct take on relationships you'll hear. <em>He sees the patterns you can't see in yourself.</em></p>
+            <p class="hero-bio">Sean almost lost his marriage before he figured out his own patterns. Now he runs a restaurant with his wife and has the warmest, most direct take on relationships you'll hear. <em>He sees patterns you can't see in yourself.</em></p>
             <a href="https://t.me/Sean_Brennan_bot?start=website" class="hero-cta" target="_blank">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                 Message Sean on Telegram
@@ -86,11 +88,9 @@
     <section class="story">
         <div class="story-inner">
             <h2>His Story</h2>
-            <p>Sean grew up in South Philly. Irish-Italian family, six kids, loud dinners, thick skin required. His dad worked construction, never talked about feelings, showed love through actions. Sean learned early that emotion was weakness.</p>
-            <p>He carried that into his marriage. Married Lisa at 26. She was patient for years while he shut down, worked too much, and expected her to read his mind. By 34, they were roommates who slept in the same bed.</p>
-            <p><strong>The wake-up call was nearly losing her.</strong> She said she was done. Not angry — tired. That was worse. In the aftermath, Sean finally did the work. Therapy. Books. Hard conversations. Looking at the patterns he'd inherited and deciding which ones to keep.</p>
-            <p>It took years. There were setbacks. But they rebuilt something real — not the fairy tale version, the messy honest version. Now they run a restaurant together, raise two kids, and fight fair most of the time.</p>
-            <p>Sean's not a relationship expert. He's a guy who screwed up, did the work, and learned some things worth sharing.</p>
+            <p>Sean grew up in South Philly. Irish-Italian family, six kids, loud dinners. His dad never talked about feelings. Sean learned early that emotion was weakness.</p>
+            <p>He carried that into his marriage. By 34, they were roommates. <strong>The wake-up call was nearly losing her.</strong> She said she was done. Not angry — tired. That was worse.</p>
+            <p>In the aftermath, Sean finally did the work. Therapy. Hard conversations. Looking at patterns he'd inherited. It took years. But they rebuilt something real.</p>
         </div>
     </section>
     <section class="quote">
@@ -101,10 +101,10 @@
         <div class="philosophy-inner">
             <h2>What Sean Believes</h2>
             <div class="beliefs">
-                <div class="belief"><h3>On Patterns</h3><p>You keep having the same fights because you keep running the same patterns. The pattern is always older than the relationship. It usually goes back to your family.</p></div>
-                <div class="belief"><h3>On Communication</h3><p>Most people don't know how to have hard conversations. They attack, defend, or shut down. There's another way, but someone has to show you.</p></div>
+                <div class="belief"><h3>On Patterns</h3><p>You keep having the same fights because you keep running the same patterns. The pattern is always older than the relationship.</p></div>
+                <div class="belief"><h3>On Communication</h3><p>Most people don't know how to have hard conversations. They attack, defend, or shut down. There's another way.</p></div>
                 <div class="belief"><h3>On Men</h3><p>Guys are taught that vulnerability is weakness. It's the opposite. The bravest thing a man can do is be honest about how he feels.</p></div>
-                <div class="belief"><h3>On Relationships</h3><p>Love isn't enough. You need skills. Communication, repair, knowing yourself — these are learnable. Nobody teaches them.</p></div>
+                <div class="belief"><h3>On Relationships</h3><p>Love isn't enough. You need skills. Communication, repair, knowing yourself — these are learnable.</p></div>
             </div>
         </div>
     </section>
@@ -113,7 +113,7 @@
         <div class="helps-grid">
             <div class="help-card"><h3>Seeing Your Patterns</h3><p>The thing you do in every relationship — he can usually spot it. Once you see it, you can change it.</p></div>
             <div class="help-card"><h3>Communication</h3><p>What to say, how to say it, how to listen. The actual skills nobody taught you.</p></div>
-            <div class="help-card"><h3>Conflict & Repair</h3><p>Fighting isn't the problem — fighting badly is. He'll help you learn to fight fair and come back together.</p></div>
+            <div class="help-card"><h3>Conflict & Repair</h3><p>Fighting isn't the problem — fighting badly is. He'll help you learn to fight fair.</p></div>
             <div class="help-card"><h3>Dating & Choosing</h3><p>Why you keep picking the same type. What you're actually looking for. Red flags and green ones.</p></div>
             <div class="help-card"><h3>Family Stuff</h3><p>The patterns started somewhere. He'll help you see what you inherited and decide what to keep.</p></div>
             <div class="help-card"><h3>Being a Man</h3><p>What masculinity actually looks like when it's healthy. Strength and vulnerability together.</p></div>
@@ -121,7 +121,7 @@
     </section>
     <section class="cta">
         <h2>Ready to do the work?</h2>
-        <p>Sean's not a therapist. He's a guy from Philly who almost lost his marriage and figured out how to build something real. He can help you do the same.</p>
+        <p>Sean's not a therapist. He's a guy from Philly who almost lost his marriage and figured out how to build something real.</p>
         <a href="https://t.me/Sean_Brennan_bot?start=website" class="hero-cta" target="_blank">
             <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
             Message Sean on Telegram
