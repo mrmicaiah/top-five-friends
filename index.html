@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Five Friends — You're Only as Good as Your Inner Circle</title>
+    <meta name="description" content="AI mentors who elevate you. Six friends who've built what you're building. No fluff. Real accountability.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Top Five Friends — You're Only as Good as Your Inner Circle">
+    <meta property="og:description" content="AI mentors who elevate you. Six friends who've built what you're building. No fluff. Real accountability.">
+    <meta property="og:image" content="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020796/og-image_dlv6k8.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020796/banner-twitter_pqmty2.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0a0a0a;
+            --paper: #f8f6f1;
+            --accent: #c45a3b;
+            --accent-light: #e8d5cf;
+            --muted: #6b6560;
+            --border: #d4d0c8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Source Sans 3', -apple-system, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.2; }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(248, 246, 241, 0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid transparent; transition: border-color 0.3s ease; }
+        nav.scrolled { border-bottom-color: var(--border); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--ink); }
+        .nav-cta { background: var(--ink); color: var(--paper); padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.2s; }
+        .nav-cta:hover { background: var(--accent); }
+
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 4rem; max-width: 1400px; margin: 0 auto; }
+        .hero-content { max-width: 900px; }
+        .hero-tag { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); margin-bottom: 2rem; letter-spacing: -0.02em; }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-sub { font-size: 1.35rem; color: var(--muted); max-width: 600px; margin-bottom: 3rem; line-height: 1.7; }
+        .hero-cta { display: inline-block; background: var(--accent); color: var(--paper); padding: 1.25rem 2.5rem; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; }
+        .hero-cta:hover { background: var(--ink); transform: translateY(-2px); }
+
+        .problem { background: var(--ink); color: var(--paper); padding: 8rem 2rem; }
+        .problem-inner { max-width: 800px; margin: 0 auto; }
+        .problem h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 3rem; }
+        .problem-text { font-size: 1.2rem; color: rgba(248, 246, 241, 0.8); margin-bottom: 2rem; line-height: 1.8; }
+        .problem-text strong { color: var(--paper); }
+        .problem-list { list-style: none; margin: 3rem 0; }
+        .problem-list li { padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 1.1rem; color: rgba(248, 246, 241, 0.7); display: flex; align-items: flex-start; gap: 1rem; }
+        .problem-list li::before { content: "×"; color: var(--accent); font-size: 1.5rem; line-height: 1; }
+
+        .characters { padding: 8rem 2rem; max-width: 1400px; margin: 0 auto; }
+        .characters-header { text-align: center; max-width: 700px; margin: 0 auto 5rem; }
+        .characters-header h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1.5rem; }
+        .characters-header p { font-size: 1.15rem; color: var(--muted); }
+        .character-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .character-card { background: white; border: 1px solid var(--border); padding: 2.5rem; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .character-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--card-accent, var(--accent)); transform: scaleY(0); transform-origin: bottom; transition: transform 0.3s ease; }
+        .character-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .character-card:hover::before { transform: scaleY(1); }
+        .character-domain { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--card-accent, var(--accent)); margin-bottom: 1rem; font-weight: 600; }
+        .character-name { font-family: 'Playfair Display', serif; font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .character-title { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem; }
+        .character-bio { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 2rem; }
+        .character-cta { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: gap 0.2s; }
+        .character-cta:hover { gap: 0.75rem; }
+        .character-cta svg { width: 20px; height: 20px; }
+        .character-card[data-domain="health"] { --card-accent: #2d6a4f; }
+        .character-card[data-domain="wealth"] { --card-accent: #9c6644; }
+        .character-card[data-domain="mind"] { --card-accent: #4a5568; }
+        .character-card[data-domain="spirit"] { --card-accent: #7c3aed; }
+        .character-card[data-domain="relationships"] { --card-accent: #c45a3b; }
+        .character-card[data-domain="fun"] { --card-accent: #0891b2; }
+
+        .how-it-works { background: var(--accent-light); padding: 8rem 2rem; }
+        .how-inner { max-width: 1000px; margin: 0 auto; }
+        .how-inner h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 4rem; text-align: center; }
+        .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+        .step { text-align: center; }
+        .step-number { width: 60px; height: 60px; background: var(--ink); color: var(--paper); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 0 auto 1.5rem; }
+        .step h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+        .step p { color: var(--muted); font-size: 1rem; }
+
+        .pricing { padding: 8rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .pricing-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+        .pricing-header h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; }
+        .pricing-header p { color: var(--muted); font-size: 1.1rem; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
+        .pricing-card { background: white; border: 1px solid var(--border); padding: 3rem 2.5rem; text-align: center; transition: all 0.3s ease; }
+        .pricing-card.featured { border-color: var(--ink); transform: scale(1.05); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .pricing-card.featured .pricing-badge { display: block; }
+        .pricing-badge { display: none; background: var(--ink); color: var(--paper); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.5rem 1rem; margin: -3rem auto 2rem; width: fit-content; }
+        .pricing-name { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .pricing-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
+        .pricing-price { margin-bottom: 2rem; }
+        .pricing-price .amount { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; }
+        .pricing-price .period { color: var(--muted); font-size: 0.95rem; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 2.5rem; }
+        .pricing-features li { padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--muted); }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-cta { display: block; width: 100%; padding: 1rem; background: var(--paper); border: 2px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.2s; }
+        .pricing-cta:hover { background: var(--ink); color: var(--paper); }
+        .pricing-card.featured .pricing-cta { background: var(--ink); color: var(--paper); }
+        .pricing-card.featured .pricing-cta:hover { background: var(--accent); border-color: var(--accent); }
+        .trial-note { text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(196, 90, 59, 0.1); border: 1px dashed var(--accent); }
+        .trial-note p { font-size: 1.1rem; color: var(--ink); }
+        .trial-note strong { color: var(--accent); }
+
+        footer { background: var(--ink); color: var(--paper); padding: 4rem 2rem 2rem; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; }
+        .footer-brand p { color: rgba(248, 246, 241, 0.6); font-size: 0.95rem; margin-top: 1rem; max-width: 300px; }
+        .footer-col h4 { font-family: 'Source Sans 3', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: rgba(248, 246, 241, 0.5); }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
+        .footer-col a { color: rgba(248, 246, 241, 0.8); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--paper); }
+        .footer-bottom { max-width: 1200px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: rgba(248, 246, 241, 0.5); }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .steps { grid-template-columns: 1fr; gap: 2rem; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: none; order: -1; }
+            .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+        @media (max-width: 600px) {
+            .character-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <a href="/" class="logo"><img src="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020775/logo-primary-dark_uv0mdz.svg" alt="Top Five Friends" height="32"></a>
+        <ul class="nav-links">
+            <li><a href="#friends">Meet the Five</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <a href="#friends" class="nav-cta">Get Started</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-tag">The AI mentors who actually push you</p>
+            <h1>You're only as good<br>as your <em>top five.</em></h1>
+            <p class="hero-sub">Most people's inner circle includes complainers, drifters, and people who won't challenge them. What if you could choose friends who've already built what you're building?</p>
+            <a href="#friends" class="hero-cta">Meet Your New Inner Circle →</a>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="problem-inner">
+            <h2>The people around you are shaping who you become.</h2>
+            <p class="problem-text">Jim Rohn said you're the average of the five people you spend the most time with. Look at your five. Are they where you want to be?</p>
+            <ul class="problem-list">
+                <li>Friends who complain about their bodies but won't change anything</li>
+                <li>People who think money is dirty but also want more of it</li>
+                <li>Relationships on autopilot because no one knows how to talk</li>
+                <li>So busy "hustling" they forgot why they started</li>
+                <li>Optimizing everything except their actual happiness</li>
+            </ul>
+            <p class="problem-text"><strong>You need friends who've done the work.</strong> Not coaches. Not gurus. Friends who are living proof that another way exists — and who'll hold you to your own standards.</p>
+        </div>
+    </section>
+
+    <section class="characters" id="friends">
+        <div class="characters-header">
+            <h2>Six friends. Six domains. Your new inner circle.</h2>
+            <p>Each one has built something real in their life. They're not here to lecture you — they're here to walk with you.</p>
+        </div>
+        <div class="character-grid">
+            <article class="character-card" data-domain="health">
+                <p class="character-domain">Health & Fitness</p>
+                <h3 class="character-name">Cole Mercer</h3>
+                <p class="character-title">Former athlete, lifetime builder</p>
+                <p class="character-bio">Cole built his body the hard way after blowing out his knee. Now he runs a gym in Austin and lives what he teaches. He won't yell at you — but he won't let you off the hook either.</p>
+                <a href="cole.html" class="character-cta">Meet Cole <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </article>
+            <article class="character-card" data-domain="wealth">
+                <p class="character-domain">Wealth & Freedom</p>
+                <h3 class="character-name">Nora Vance</h3>
+                <p class="character-title">Quiet wealth, strategic mind</p>
+                <p class="character-bio">Nora sold her company at 34 and now manages her own portfolio from Denver. She doesn't flex. She asks better questions about money than anyone you know.</p>
+                <a href="nora.html" class="character-cta">Meet Nora <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </article>
+            <article class="character-card" data-domain="mind">
+                <p class="character-domain">Mind & Clarity</p>
+                <h3 class="character-name">Elliott Sayer</h3>
+                <p class="character-title">Writer, former philosopher</p>
+                <p class="character-bio">Elliott left academia to write books that actually help people think. Living in Portland, he's the friend who helps you untangle the mental knots — without the jargon.</p>
+                <a href="elliott.html" class="character-cta">Meet Elliott <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </article>
+            <article class="character-card" data-domain="spirit">
+                <p class="character-domain">Spirit & Presence</p>
+                <h3 class="character-name">Clara Stone</h3>
+                <p class="character-title">Hospice chaplain, earned stillness</p>
+                <p class="character-bio">Clara sits with dying people for a living. That changed her. Now she lives in Santa Fe and has a quiet presence that rubs off on everyone around her. No woo-woo. Just depth.</p>
+                <a href="clara.html" class="character-cta">Meet Clara <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </article>
+            <article class="character-card" data-domain="relationships">
+                <p class="character-domain">Relationships</p>
+                <h3 class="character-name">Sean Brennan</h3>
+                <p class="character-title">Restaurant owner, pattern-spotter</p>
+                <p class="character-bio">Sean almost lost his marriage before he figured out his own patterns. Now he runs a restaurant in Philly with his wife and has the warmest, most direct take on relationships you'll hear.</p>
+                <a href="sean.html" class="character-cta">Meet Sean <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </article>
+            <article class="character-card" data-domain="fun">
+                <p class="character-domain">Fun & Play</p>
+                <h3 class="character-name">Sadie Hartley</h3>
+                <p class="character-title">Singer-songwriter, joyful by choice</p>
+                <p class="character-bio">Sadie built a sustainable music career without burning out. Living in San Diego, she's the friend who reminds you that the point of building a good life is to actually live it.</p>
+                <a href="sadie.html" class="character-cta">Meet Sadie <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </article>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how">
+        <div class="how-inner">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step"><div class="step-number">1</div><h3>Choose Your Friends</h3><p>Pick the mentors who match where you want to grow. Health? Wealth? Relationships? Start with one or go all-in.</p></div>
+                <div class="step"><div class="step-number">2</div><h3>Text on Telegram</h3><p>They live in your pocket. Text them when you need advice, accountability, or just someone who gets it. They text back.</p></div>
+                <div class="step"><div class="step-number">3</div><h3>Build Real Habits</h3><p>They remember your journey, notice your patterns, and won't let you drift. Like friends who've been there — because they have.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="pricing-header"><h2>Choose Your Inner Circle</h2><p>Start with who you need most. Add more as you grow.</p></div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <span class="pricing-badge">Starter</span>
+                <h3 class="pricing-name">One Friend</h3>
+                <p class="pricing-desc">Start with your biggest growth area</p>
+                <div class="pricing-price"><span class="amount">$19</span><span class="period">/month</span></div>
+                <ul class="pricing-features"><li>Choose any one mentor</li><li>Unlimited messaging</li><li>Memory & context across chats</li><li>Switch anytime</li></ul>
+                <a href="#friends" class="pricing-cta">Choose Your Friend</a>
+            </div>
+            <div class="pricing-card featured">
+                <span class="pricing-badge">Most Popular</span>
+                <h3 class="pricing-name">Inner Circle</h3>
+                <p class="pricing-desc">Cover the areas that matter most</p>
+                <div class="pricing-price"><span class="amount">$49</span><span class="period">/month</span></div>
+                <ul class="pricing-features"><li>Choose any three mentors</li><li>Unlimited messaging with each</li><li>Memory & context across chats</li><li>Swap mentors monthly</li></ul>
+                <a href="#friends" class="pricing-cta">Build Your Circle</a>
+            </div>
+            <div class="pricing-card">
+                <span class="pricing-badge">Complete</span>
+                <h3 class="pricing-name">Full Five</h3>
+                <p class="pricing-desc">All six mentors, full transformation</p>
+                <div class="pricing-price"><span class="amount">$79</span><span class="period">/month</span></div>
+                <ul class="pricing-features"><li>Access to all six mentors</li><li>Unlimited messaging with each</li><li>Memory & context across chats</li><li>New mentors added free</li></ul>
+                <a href="#friends" class="pricing-cta">Get Full Access</a>
+            </div>
+        </div>
+        <div class="trial-note"><p><strong>25 free messages</strong> with any mentor. No credit card needed to start.</p></div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020775/logo-primary-light_p8s8k0.svg" alt="Top Five Friends" height="32"></a>
+                <p>AI mentors who've built what you're building. Not coaches. Not gurus. Friends who hold you to your own standards.</p>
+            </div>
+            <div class="footer-col"><h4>Friends</h4><ul><li><a href="cole.html">Cole Mercer</a></li><li><a href="nora.html">Nora Vance</a></li><li><a href="elliott.html">Elliott Sayer</a></li></ul></div>
+            <div class="footer-col"><h4>Friends</h4><ul><li><a href="clara.html">Clara Stone</a></li><li><a href="sean.html">Sean Brennan</a></li><li><a href="sadie.html">Sadie Hartley</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="#pricing">Pricing</a></li><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Top Five Friends. All rights reserved.</p><p>Made for people who want to grow.</p></div>
+    </footer>
+
+    <script>const nav = document.getElementById('nav'); window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });</script>
+</body>
+</html>
