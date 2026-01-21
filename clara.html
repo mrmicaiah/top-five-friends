@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara Stone — Spirit & Presence Mentor | Top Five Friends</title>
+    <meta name="description" content="Meet Clara Stone. Hospice chaplain who found stillness through grief. No woo-woo. Just the kind of depth that comes from facing mortality every day.">
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink: #0a0a0a; --paper: #f8f6f1; --accent: #7c3aed; --accent-light: #ede9fe; --muted: #6b6560; --border: #d4d0c8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans 3', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; line-height: 1.2; }
+        nav { position: fixed; top: 0; left: 0; right: 0; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(248, 246, 241, 0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--border); }
+        .logo { text-decoration: none; }
+        .nav-cta { background: var(--ink); color: var(--paper); padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 500; transition: all 0.2s; }
+        .nav-cta:hover { background: var(--accent); }
+        .hero { padding: 10rem 2rem 6rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 0.5rem 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1rem; }
+        .hero-title { font-size: 1.25rem; color: var(--muted); margin-bottom: 2rem; }
+        .hero-bio { font-size: 1.15rem; line-height: 1.8; margin-bottom: 2.5rem; }
+        .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--accent); color: white; padding: 1.25rem 2rem; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .hero-cta:hover { background: var(--ink); transform: translateY(-2px); }
+        .hero-cta svg { width: 24px; height: 24px; }
+        .img-placeholder { aspect-ratio: 4/5; background: linear-gradient(135deg, var(--accent-light), #c4b5fd); display: flex; align-items: center; justify-content: center; font-size: 6rem; border: 1px solid var(--border); position: relative; }
+        .img-badge { position: absolute; bottom: -1rem; right: -1rem; background: white; border: 1px solid var(--border); padding: 1rem 1.5rem; font-family: 'Playfair Display', serif; font-style: italic; }
+        .story { background: white; padding: 6rem 2rem; }
+        .story-inner { max-width: 800px; margin: 0 auto; }
+        .story h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--accent); }
+        .story p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--muted); }
+        .story p strong { color: var(--ink); }
+        .quote { background: var(--accent-light); padding: 5rem 2rem; text-align: center; }
+        .quote blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2.5rem); font-style: italic; max-width: 800px; margin: 0 auto; }
+        .quote cite { display: block; margin-top: 1.5rem; font-style: normal; color: var(--muted); }
+        .philosophy { background: var(--ink); color: var(--paper); padding: 6rem 2rem; }
+        .philosophy-inner { max-width: 1000px; margin: 0 auto; }
+        .philosophy h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+        .beliefs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .belief { padding: 2rem; border: 1px solid rgba(255,255,255,0.1); }
+        .belief h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: 1rem; }
+        .belief p { color: rgba(248, 246, 241, 0.8); line-height: 1.7; }
+        .helps { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .helps h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+        .helps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .help-card { padding: 2rem; background: white; border: 1px solid var(--border); }
+        .help-card h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent); }
+        .help-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+        .cta { padding: 6rem 2rem; text-align: center; max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .cta > p { font-size: 1.15rem; color: var(--muted); margin-bottom: 2.5rem; }
+        .cta-trial { margin-top: 1.5rem; font-size: 0.95rem; color: var(--muted); }
+        .other { padding: 4rem 2rem; border-top: 1px solid var(--border); }
+        .other-inner { max-width: 1200px; margin: 0 auto; }
+        .other h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 2rem; text-align: center; }
+        .other-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .other-link { color: var(--ink); text-decoration: none; font-weight: 500; padding: 0.75rem 1.5rem; border: 1px solid var(--border); transition: all 0.2s; }
+        .other-link:hover { background: white; border-color: var(--ink); }
+        footer { background: var(--ink); color: var(--paper); padding: 3rem 2rem; text-align: center; }
+        footer p { font-size: 0.9rem; color: rgba(248, 246, 241, 0.6); }
+        footer a { color: var(--paper); }
+        @media (max-width: 900px) { .hero { grid-template-columns: 1fr; text-align: center; } .beliefs, .helps-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020775/logo-primary-dark_uv0mdz.svg" alt="Top Five Friends" height="28"></a>
+        <a href="https://t.me/Clara_Stone_bot?start=website" class="nav-cta" target="_blank">Message Clara</a>
+    </nav>
+    <section class="hero">
+        <div>
+            <span class="hero-tag">Spirit & Presence</span>
+            <h1>Clara Stone</h1>
+            <p class="hero-title">Hospice chaplain, Santa Fe • 52</p>
+            <p class="hero-bio">Clara sits with dying people for a living. That changed her. She has a quiet presence that rubs off on everyone around her. <em>No woo-woo. No toxic positivity. Just the kind of depth that comes from facing mortality every day.</em></p>
+            <a href="https://t.me/Clara_Stone_bot?start=website" class="hero-cta" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                Message Clara on Telegram
+            </a>
+        </div>
+        <div class="img-placeholder">🕯️<span class="img-badge">Santa Fe, NM</span></div>
+    </section>
+    <section class="story">
+        <div class="story-inner">
+            <h2>Her Story</h2>
+            <p>Clara wasn't always still. In her 30s, she was climbing the corporate ladder, chasing achievements, running from something she couldn't name. Then her husband Daniel got sick.</p>
+            <p><strong>Two years of hospitals, treatments, hope, and then grief.</strong> She was 42 when he died. The life she'd built fell apart. Everything she thought mattered didn't.</p>
+            <p>In the wreckage, she found hospice chaplaincy. It wasn't a calling at first — just the only thing that made sense. Sitting with dying people, holding space for the end, learning what actually matters when there's no time left.</p>
+            <p>Ten years of that work carved something out of her. The urgency drained away. What remained was presence — the ability to be with someone, fully, without needing to fix or change anything.</p>
+            <p>Now she lives simply in Santa Fe. She tends her garden. She walks in the desert. She still does hospice work, but part-time. She's not enlightened — she still gets frustrated, still has hard days. But there's a groundedness to her that people feel immediately.</p>
+        </div>
+    </section>
+    <section class="quote">
+        <blockquote>"The present moment is the only one you have. Stop rehearsing for a life you might never live."</blockquote>
+        <cite>— Clara's core belief</cite>
+    </section>
+    <section class="philosophy">
+        <div class="philosophy-inner">
+            <h2>What Clara Believes</h2>
+            <div class="beliefs">
+                <div class="belief"><h3>On Presence</h3><p>Most people are never actually here. They're rehearsing the future or relitigating the past. The practice is simple: be where you are. It's also the hardest thing there is.</p></div>
+                <div class="belief"><h3>On Death</h3><p>Remembering you will die clarifies everything. The petty stuff falls away. What's left is what actually matters. Most people avoid this truth until they can't.</p></div>
+                <div class="belief"><h3>On Stillness</h3><p>Stillness isn't doing nothing. It's the foundation everything else rests on. Without it, you're just reacting. With it, you can respond.</p></div>
+                <div class="belief"><h3>On Spirituality</h3><p>She's not selling a belief system. The spiritual life is about paying attention, being honest, and staying awake. Everything else is decoration.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="helps">
+        <h2>What She'll Help You With</h2>
+        <div class="helps-grid">
+            <div class="help-card"><h3>Finding Ground</h3><p>When everything feels chaotic, she helps you find the stillness underneath. Not escape — ground. A place to stand.</p></div>
+            <div class="help-card"><h3>Facing Hard Things</h3><p>Loss, fear, uncertainty — she's been there. She won't tell you it's fine when it isn't. She'll sit with you in the hard.</p></div>
+            <div class="help-card"><h3>Slowing Down</h3><p>The urgency is a lie. She'll help you see it. Most of what feels urgent isn't. What's important rarely screams.</p></div>
+            <div class="help-card"><h3>Meaning & Purpose</h3><p>Not the motivational poster version. Real questions about what you're doing here and what actually matters to you.</p></div>
+            <div class="help-card"><h3>Grief & Loss</h3><p>She knows grief intimately. She won't rush you through it or tell you how to feel. She'll witness it with you.</p></div>
+            <div class="help-card"><h3>Just Being</h3><p>Sometimes you don't need advice or solutions. You just need someone who can be present with you. She can do that.</p></div>
+        </div>
+    </section>
+    <section class="cta">
+        <h2>Ready to slow down?</h2>
+        <p>Clara's not a guru. She's a woman who's been broken open by life and found something on the other side. She can help you find your own ground.</p>
+        <a href="https://t.me/Clara_Stone_bot?start=website" class="hero-cta" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Message Clara on Telegram
+        </a>
+        <p class="cta-trial">25 free messages. No credit card needed.</p>
+    </section>
+    <section class="other">
+        <div class="other-inner">
+            <h3>Meet the Other Friends</h3>
+            <div class="other-row">
+                <a href="cole.html" class="other-link">Cole Mercer — Health</a>
+                <a href="nora.html" class="other-link">Nora Vance — Wealth</a>
+                <a href="elliott.html" class="other-link">Elliott Sayer — Mind</a>
+                <a href="sean.html" class="other-link">Sean Brennan — Relationships</a>
+                <a href="sadie.html" class="other-link">Sadie Hartley — Fun</a>
+            </div>
+        </div>
+    </section>
+    <footer><p>© 2026 <a href="index.html">Top Five Friends</a>. All rights reserved.</p></footer>
+</body>
+</html>
