@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting up your account...</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f8f6f1;
+            color: #0a0a0a;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 2rem;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #e8d5cf;
+            border-top-color: #c45a3b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: #6b6560;
+            font-size: 0.95rem;
+        }
+        .error {
+            display: none;
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .error.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Verifying your link...</h1>
+        <p>Just a moment while we set things up.</p>
+        <div class="error" id="error"></div>
+    </div>
+
+    <script>
+        (async () => {
+            // Get token from URL
+            const pathParts = window.location.pathname.split('/');
+            const token = pathParts[pathParts.length - 1];
+
+            if (!token || token === 'magic') {
+                showError('Invalid link. Please request a new one from your mentor.');
+                return;
+            }
+
+            try {
+                // Verify token with companion-accounts
+                const response = await fetch(`https://companion-accounts.micaiah-tasks.workers.dev/link/verify/${token}`);
+                const data = await response.json();
+
+                if (!data.valid) {
+                    showError(data.error || 'This link is invalid or has expired. Please request a new one.');
+                    return;
+                }
+
+                // Build signup URL
+                const signupUrl = new URL(`https://topfivefriends.com/signup-${data.character}.html`);
+                signupUrl.searchParams.set('token', token);
+                signupUrl.searchParams.set('email', data.email);
+                if (data.chatId) {
+                    signupUrl.searchParams.set('chat_id', data.chatId);
+                }
+
+                // Redirect
+                window.location.href = signupUrl.toString();
+
+            } catch (error) {
+                console.error('Verification error:', error);
+                showError('Something went wrong. Please try again or request a new link.');
+            }
+        })();
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+            document.querySelector('.spinner').style.display = 'none';
+            document.querySelector('h1').textContent = 'Oops!';
+            document.querySelector('p').textContent = '';
+        }
+    </script>
+</body>
+</html>

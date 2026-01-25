@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back! — Top Five Friends</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #c45a3b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans 3', -apple-system, sans-serif; background: #f8f6f1; color: #0a0a0a; line-height: 1.6; }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.2; }
+        
+        .container { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+        .icon { width: 80px; height: 80px; background: #2d6a4f; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 3rem; }
+        h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem; }
+        .subtitle { font-size: 1.2rem; color: #6b6560; margin-bottom: 3rem; }
+        
+        .next-steps { background: white; border: 1px solid #d4d0c8; padding: 2rem; text-align: left; margin: 2rem 0; }
+        .next-steps h2 { font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+        .step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+        .step-number { width: 32px; height: 32px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; }
+        .step-content h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .step-content p { color: #6b6560; font-size: 0.95rem; }
+        
+        .telegram-btn { display: inline-block; background: #0088cc; color: white; padding: 1rem 2rem; margin-top: 1rem; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .telegram-btn:hover { background: #0077b3; }
+        .home-link { display: inline-block; margin-top: 1.5rem; color: #6b6560; text-decoration: none; font-size: 0.95rem; }
+        .home-link:hover { color: #0a0a0a; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem 1rem; }
+            .next-steps { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✓</div>
+        <h1>You're All Set!</h1>
+        <p class="subtitle">Welcome back. Let's pick up where you left off.</p>
+        
+        <div class="next-steps">
+            <h2>What Happens Next</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Check Your Email</h3>
+                    <p>You'll receive a confirmation from Stripe with your receipt.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Open Telegram</h3>
+                    <p>Head back to your conversation and keep chatting.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Unlimited Access</h3>
+                    <p>No more limits. Chat whenever you want, about whatever you want.</p>
+                </div>
+            </div>
+        </div>
+        
+        <a href="https://t.me" class="telegram-btn" id="telegramBtn">Open Telegram →</a>
+        <a href="/" class="home-link">← Back to Top Five Friends</a>
+    </div>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const character = urlParams.get('character');
+        
+        const botLinks = {
+            'sadie': 'https://t.me/Sadie_Hartley_bot',
+            'cole': 'https://t.me/Cole_Mercer_bot',
+            'nora': 'https://t.me/Nora_Vance_bot',
+            'elliott': 'https://t.me/Elliott_Sayer_bot',
+            'clara': 'https://t.me/Clara_Stone_bot',
+            'sean': 'https://t.me/Sean_Brennan_bot'
+        };
+        
+        if (character && botLinks[character]) {
+            document.getElementById('telegramBtn').href = botLinks[character];
+        }
+    </script>
+</body>
+</html>

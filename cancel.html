@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Cancelled — Top Five Friends</title>
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans 3', -apple-system, sans-serif; background: #f8f6f1; color: #0a0a0a; line-height: 1.6; }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.2; }
+        
+        .container { max-width: 600px; margin: 0 auto; padding: 3rem 1.5rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+        .icon { width: 80px; height: 80px; background: #6b6560; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 3rem; opacity: 0.5; }
+        h1 { font-size: clamp(2rem, 6vw, 2.5rem); margin-bottom: 1rem; }
+        p { font-size: 1.1rem; color: #6b6560; margin-bottom: 2rem; line-height: 1.7; }
+        
+        .actions { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .btn-primary { background: #c45a3b; color: white; }
+        .btn-primary:hover { background: #0a0a0a; }
+        .btn-secondary { background: white; color: #0a0a0a; border: 2px solid #0a0a0a; }
+        .btn-secondary:hover { background: #0a0a0a; color: white; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">×</div>
+        <h1>No Worries</h1>
+        <p>You haven't been charged. Take your time thinking it over.</p>
+        <p>The link is still good for 24 hours if you change your mind.</p>
+        
+        <div class="actions">
+            <a href="#" id="retryBtn" class="btn btn-primary">Try Again</a>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        const email = urlParams.get('email');
+        const chatId = urlParams.get('chat_id');
+        const character = urlParams.get('character');
+        
+        const retryBtn = document.getElementById('retryBtn');
+        if (character && token && email) {
+            retryBtn.href = `/signup-${character}.html?token=${token}&email=${email}&chat_id=${chatId || ''}`;
+        } else {
+            retryBtn.href = '/#pricing';
+        }
+    </script>
+</body>
+</html>
