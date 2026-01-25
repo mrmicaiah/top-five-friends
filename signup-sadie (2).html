@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continue with Sean — Top Five Friends</title>
-    <meta name="description" content="Choose your plan to keep chatting with Sean Brennan">
+    <title>Continue with Sadie — Top Five Friends</title>
+    <meta name="description" content="Choose your plan to keep chatting with Sadie Hartley">
     <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dxzw1zwez/image/upload/v1769020728/favicon_mhug2q.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #c45a3b; }
+        :root { --accent: #0891b2; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Source Sans 3', -apple-system, sans-serif; background: #f8f6f1; color: #0a0a0a; line-height: 1.6; }
         h1, h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.2; }
@@ -23,7 +23,7 @@
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
         .pricing-card { background: white; border: 2px solid #d4d0c8; padding: 2rem; cursor: pointer; transition: all 0.3s; }
         .pricing-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .pricing-card.selected { border-color: var(--accent); background: rgba(196, 90, 59, 0.05); position: relative; }
+        .pricing-card.selected { border-color: var(--accent); background: rgba(8, 145, 178, 0.05); position: relative; }
         .pricing-card.selected::after { content: "✓"; position: absolute; top: 1rem; right: 1rem; width: 28px; height: 28px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
         
         .badge { background: #0a0a0a; color: #f8f6f1; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 0.8rem; margin-bottom: 1rem; display: inline-block; }
@@ -56,12 +56,12 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Continue with Sean</h1>
+            <h1>Continue with Sadie</h1>
             <p>Choose your plan to keep the conversation going</p>
         </div>
         
         <div class="pricing-grid">
-            <div class="pricing-card" data-plan="monthly" data-price-id="price_1SsVUgHSBCQi9g6mVhNe8FyC">
+            <div class="pricing-card" data-plan="monthly" data-price-id="price_1SsVSUHSBCQi9g6mX1lJVT21">
                 <span class="badge">Flexible</span>
                 <h2 class="pricing-name">Monthly</h2>
                 <div class="pricing-price">
@@ -76,7 +76,7 @@
                 </ul>
             </div>
             
-            <div class="pricing-card" data-plan="yearly" data-price-id="price_1SsVUoHSBCQi9g6m3AjIGNzK">
+            <div class="pricing-card" data-plan="yearly" data-price-id="price_1SsVSsHSBCQi9g6mbijdNX58">
                 <span class="badge">Best Value</span>
                 <h2 class="pricing-name">Annual</h2>
                 <div class="pricing-price">
@@ -107,7 +107,7 @@
         const chatId = urlParams.get('chat_id');
         
         if (!token || !email) {
-            document.getElementById('error').textContent = 'Invalid signup link. Please request a new one from Sean.';
+            document.getElementById('error').textContent = 'Invalid signup link. Please request a new one from Sadie.';
             document.getElementById('error').classList.add('active');
         }
         
@@ -143,11 +143,11 @@
                         email: email,
                         priceId: selectedPlan.priceId,
                         tier: 1,
-                        characters: ['sean'],
+                        characters: ['sadie'],
                         chatId: chatId,
-                        character: 'sean',
-                        successUrl: 'https://topfivefriends.com/success?character=sean',
-                        cancelUrl: `https://topfivefriends.com/cancel?token=${token}&email=${email}&chat_id=${chatId || ''}&character=sean`
+                        character: 'sadie',
+                        successUrl: 'https://topfivefriends.com/success?character=sadie',
+                        cancelUrl: `https://topfivefriends.com/cancel?token=${token}&email=${email}&chat_id=${chatId || ''}&character=sadie`
                     })
                 });
                 
